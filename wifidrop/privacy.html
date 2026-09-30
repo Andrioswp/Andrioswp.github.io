@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WiFiDrop — Политика конфиденциальности / Privacy Policy</title>
+<link rel="stylesheet" href="/wifidrop/style.css">
+</head>
+<body>
+<main>
+<header><nav><a href="/wifidrop/">WiFiDrop</a><a href="/wifidrop/privacy.html">Политика конфиденциальности / Privacy Policy</a><a href="/wifidrop/terms.html">Условия использования / Terms of Service</a><a href="https://github.com/Andrioswp/WiFiDrop-releases/releases">Загрузки / Downloads</a></nav></header>
+<h1>Политика конфиденциальности / Privacy Policy</h1>
+<p class="muted">WiFiDrop (Android, iOS, macOS, Web) · Дата вступления в силу / Effective date: 1 октября 2026 / 1 October 2026</p>
+
+<section lang="en">
+<h2>English</h2>
+<p>This Privacy Policy explains how WiFiDrop ("the app"), developed by Aleksei Ignatev ("the developer", "we"), handles your data. WiFiDrop transfers files and clipboard text between your own devices over the local network.</p>
+
+<h3>1. How WiFiDrop works</h3>
+<p>The phone runs a local HTTP server inside the app. Your other devices (the WiFiDrop macOS app or any web browser) connect to it directly over the local Wi‑Fi network — by IP address and port, by QR code, or through automatic discovery on the local network (Bonjour / mDNS, service <code>_wifidrop._tcp</code>). On Android the app can also start a local-only Wi‑Fi hotspot so devices can connect without a shared router; its network name and password are shown as a QR code on your screen.</p>
+
+<h3>2. Your files stay between your devices</h3>
+<ul>
+<li>Files, photos, videos, clipboard text and notifications are transferred <b>directly between your devices on the local network</b>. They are <b>never uploaded to the developer's servers</b> — the developer does not operate any servers for the app.</li>
+<li>The app has <b>no user accounts</b>, <b>no advertising</b>, <b>no analytics</b> and <b>no crash-reporting or tracking SDKs</b>.</li>
+<li>We do not collect, sell or share your personal data with third parties.</li>
+</ul>
+
+<h3>3. What a connected device can see</h3>
+<p>A device connected to WiFiDrop on your phone can receive:</p>
+<ul>
+<li>the phone's device name, local IP address and port, platform, app version, battery level and charging state, and free/total storage;</li>
+<li>lists of your photos, videos and files, their thumbnails and metadata (for example size, date, camera information and, if present in the photo, GPS coordinates), and the files themselves when downloaded;</li>
+<li>the clipboard text, if you use clipboard sync;</li>
+<li>on Android, if you enable notification access: the notifications currently on your phone (app name and icon, title, text).</li>
+</ul>
+<p>Data sent to a connected device is shown only on that device. Received files are saved on the receiving device (for example in its Downloads folder or in the app's upload folder).</p>
+
+<h3>4. Security on the local network</h3>
+<p>Transfers on the local network use plain HTTP and are not encrypted. You can set an optional 5-digit PIN that restricts access to viewing and downloading your files, media and notifications. Browser share links contain a random token that changes for each sharing session. Use WiFiDrop only on networks you trust, and stop the server when you are done.</p>
+
+<h3>5. Internet connections</h3>
+<p>WiFiDrop works without the internet. It makes only the following internet connections:</p>
+<ul>
+<li><b>Update check (Android only).</b> When the server starts, the app requests the latest release information from the public GitHub API (<code>api.github.com/repos/Andrioswp/WiFiDrop-releases/releases/latest</code>). If you choose to update, the APK file is downloaded from GitHub and opened in the system installer. No personal data is sent; GitHub, as with any web request, receives your IP address and the app's name in the request header. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</li>
+<li><b>Fonts.</b> The app uses the Google Fonts library, which downloads the Roboto font from Google's servers the first time it is needed and caches it on the device. Google receives your IP address as part of the request. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+<li><b>Links you tap.</b> Some links open in your browser only when you tap them: the photo location on OpenStreetMap (the photo's coordinates are included in the link), and the developer's support/donation page (CloudTips) and Telegram. The operators of those websites handle that data under their own policies.</li>
+</ul>
+
+<h3>6. Permissions and why they are needed</h3>
+<p><b>Android</b></p>
+<ul>
+<li><i>Internet, network state, Wi‑Fi state, change Wi‑Fi state, Wi‑Fi multicast</i> — run the local server, detect the phone's Wi‑Fi IP address, discover and advertise devices on the local network; internet is used only for the connections listed in section 5.</li>
+<li><i>Nearby Wi‑Fi devices, local network access</i> — local network discovery and the local hotspot. Nearby Wi‑Fi devices is declared with "never for location".</li>
+<li><i>Location (fine/coarse)</i> — required by Android on some versions to start a local-only hotspot. It is requested only when you start the hotspot. WiFiDrop does not determine, store or transmit your location.</li>
+<li><i>Photos, videos, audio, storage, all-files access</i> — show your media and files to your connected device, let you download them, and save files you send to the phone.</li>
+<li><i>Notifications, foreground service, wake lock</i> — keep the server running in the background with a visible notification while you transfer files.</li>
+<li><i>Notification access</i> (optional, enabled by you in system settings) — show your phone's notifications on your connected computer and let you reply to or dismiss them from there. Notifications are read at the moment the connected device requests them and are not saved to storage by WiFiDrop.</li>
+<li><i>Query all packages</i> — show the names and icons of apps whose notifications are mirrored.</li>
+<li><i>Install packages</i> — install app updates you download and APK files you choose to open.</li>
+</ul>
+<p><b>iOS</b></p>
+<ul>
+<li><i>Local network</i> (and Bonjour service <code>_wifidrop._tcp</code>) — share files and the clipboard with your computer.</li>
+<li><i>Photo library (read)</i> — show photos and videos from your phone on your computer on the same Wi‑Fi network.</li>
+<li><i>Photo library (add)</i> — save files uploaded from your computer to your photo library when needed.</li>
+</ul>
+<p><b>macOS</b></p>
+<ul>
+<li><i>Local network, incoming and outgoing network connections</i> — find your phone on the local network and exchange files and the clipboard.</li>
+<li><i>Downloads, Desktop, Documents and files you select</i> — save received files and send files you choose. The app runs in the macOS sandbox.</li>
+</ul>
+
+<h3>7. Data stored on your device</h3>
+<p>The app stores only local settings (for example window and panel sizes and display preferences) and the files you choose to receive. Nothing is stored on the developer's servers.</p>
+
+<h3>8. Your choices and deleting data</h3>
+<ul>
+<li>You can stop the server at any time, set a PIN, and grant or revoke any permission in your device's system settings (including notification access).</li>
+<li>Uninstalling the app deletes its settings and cached data. Files you received and saved to shared folders (such as Downloads or your photo library) remain until you delete them.</li>
+</ul>
+
+<h3>9. Children</h3>
+<p>The app is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+<h3>10. Changes</h3>
+<p>We may update this policy. Changes will be published on this page with a new effective date.</p>
+
+<h3>11. Contact</h3>
+<p>Questions about this policy: <a href="mailto:dip7.alex@gmail.com">dip7.alex@gmail.com</a> (Aleksei Ignatev).</p>
+</section>
+
+<section lang="ru" class="lang">
+<h2>Русский</h2>
+<p>Настоящая Политика конфиденциальности описывает, как приложение WiFiDrop («приложение»), разработанное Алексеем Игнатьевым («разработчик», «мы»), обращается с вашими данными. WiFiDrop передаёт файлы и текст буфера обмена между вашими собственными устройствами в локальной сети.</p>
+
+<h3>1. Как работает WiFiDrop</h3>
+<p>Телефон запускает внутри приложения локальный HTTP-сервер. Другие ваши устройства (приложение WiFiDrop для macOS или любой браузер) подключаются к нему напрямую по локальной сети Wi‑Fi — по IP-адресу и порту, по QR-коду или через автоматический поиск в локальной сети (Bonjour / mDNS, служба <code>_wifidrop._tcp</code>). На Android приложение также может запустить локальную точку доступа Wi‑Fi, чтобы устройства подключались без общего роутера; её имя и пароль показываются QR-кодом на вашем экране.</p>
+
+<h3>2. Ваши файлы остаются между вашими устройствами</h3>
+<ul>
+<li>Файлы, фото, видео, текст буфера обмена и уведомления передаются <b>напрямую между вашими устройствами в локальной сети</b>. Они <b>никогда не загружаются на серверы разработчика</b> — у разработчика нет серверов для этого приложения.</li>
+<li>В приложении <b>нет учётных записей</b>, <b>нет рекламы</b>, <b>нет аналитики</b> и <b>нет SDK для отчётов о сбоях или отслеживания</b>.</li>
+<li>Мы не собираем, не продаём и не передаём ваши персональные данные третьим лицам.</li>
+</ul>
+
+<h3>3. Что видит подключённое устройство</h3>
+<p>Устройство, подключённое к WiFiDrop на вашем телефоне, может получать:</p>
+<ul>
+<li>имя устройства, локальный IP-адрес и порт, платформу, версию приложения, уровень заряда и состояние зарядки, свободное и общее место в хранилище;</li>
+<li>списки ваших фото, видео и файлов, их миниатюры и метаданные (например, размер, дату, сведения о камере и, если они есть в фото, GPS-координаты), а также сами файлы при скачивании;</li>
+<li>текст буфера обмена, если вы используете синхронизацию буфера;</li>
+<li>на Android, если вы включили доступ к уведомлениям: текущие уведомления телефона (название и значок приложения, заголовок, текст).</li>
+</ul>
+<p>Данные, переданные на подключённое устройство, отображаются только на нём. Полученные файлы сохраняются на принимающем устройстве (например, в папке «Загрузки» или в папке загрузок приложения).</p>
+
+<h3>4. Безопасность в локальной сети</h3>
+<p>Передача в локальной сети идёт по обычному HTTP и не шифруется. Можно задать необязательный 5-значный PIN-код, который ограничивает просмотр и скачивание ваших файлов, медиа и уведомлений. Ссылки для браузера содержат случайный токен, который меняется для каждого сеанса передачи. Используйте WiFiDrop только в доверенных сетях и останавливайте сервер после передачи.</p>
+
+<h3>5. Подключения к интернету</h3>
+<p>WiFiDrop работает без интернета. Приложение выполняет только следующие подключения к интернету:</p>
+<ul>
+<li><b>Проверка обновлений (только Android).</b> При запуске сервера приложение запрашивает сведения о последней версии через публичный API GitHub (<code>api.github.com/repos/Andrioswp/WiFiDrop-releases/releases/latest</code>). Если вы решите обновиться, APK-файл скачивается с GitHub и открывается в системном установщике. Персональные данные не передаются; GitHub, как при любом веб-запросе, получает ваш IP-адрес и название приложения в заголовке запроса. См. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Заявление GitHub о конфиденциальности</a>.</li>
+<li><b>Шрифты.</b> Приложение использует библиотеку Google Fonts, которая при первой необходимости скачивает шрифт Roboto с серверов Google и кэширует его на устройстве. Google получает ваш IP-адрес в составе запроса. См. <a href="https://policies.google.com/privacy">Политику конфиденциальности Google</a>.</li>
+<li><b>Ссылки, которые вы открываете.</b> Некоторые ссылки открываются в браузере только по вашему нажатию: место съёмки фото на OpenStreetMap (координаты фото входят в ссылку), страница поддержки разработчика (CloudTips) и Telegram. Эти сайты обрабатывают данные по своим правилам.</li>
+</ul>
+
+<h3>6. Разрешения и зачем они нужны</h3>
+<p><b>Android</b></p>
+<ul>
+<li><i>Интернет, состояние сети, состояние Wi‑Fi, изменение Wi‑Fi, Wi‑Fi multicast</i> — работа локального сервера, определение IP-адреса телефона в Wi‑Fi, поиск и объявление устройств в локальной сети; интернет используется только для подключений из раздела 5.</li>
+<li><i>Устройства Wi‑Fi поблизости, доступ к локальной сети</i> — поиск в локальной сети и локальная точка доступа. Разрешение «Устройства Wi‑Fi поблизости» объявлено с пометкой «не для определения местоположения».</li>
+<li><i>Местоположение (точное/приблизительное)</i> — на некоторых версиях Android обязательно для запуска локальной точки доступа. Запрашивается только при её запуске. WiFiDrop не определяет, не хранит и не передаёт ваше местоположение.</li>
+<li><i>Фото, видео, аудио, хранилище, доступ ко всем файлам</i> — показ ваших медиа и файлов на подключённом устройстве, их скачивание и сохранение файлов, отправленных на телефон.</li>
+<li><i>Уведомления, фоновая служба, удержание активности</i> — работа сервера в фоне с видимым уведомлением во время передачи.</li>
+<li><i>Доступ к уведомлениям</i> (необязательно, включается вами в настройках системы) — показ уведомлений телефона на подключённом компьютере, ответ на них и их закрытие оттуда. Уведомления считываются в момент запроса с подключённого устройства и не сохраняются WiFiDrop в хранилище.</li>
+<li><i>Список всех приложений</i> — показ названий и значков приложений, чьи уведомления отображаются.</li>
+<li><i>Установка пакетов</i> — установка скачанных обновлений и APK-файлов, которые вы решили открыть.</li>
+</ul>
+<p><b>iOS</b></p>
+<ul>
+<li><i>Локальная сеть</i> (и служба Bonjour <code>_wifidrop._tcp</code>) — обмен файлами и буфером обмена с компьютером.</li>
+<li><i>Медиатека (чтение)</i> — показ фото и видео с телефона на компьютере в той же сети Wi‑Fi.</li>
+<li><i>Медиатека (добавление)</i> — сохранение загруженных с компьютера файлов в медиатеку при необходимости.</li>
+</ul>
+<p><b>macOS</b></p>
+<ul>
+<li><i>Локальная сеть, входящие и исходящие сетевые подключения</i> — поиск телефона в локальной сети и обмен файлами и буфером обмена.</li>
+<li><i>Загрузки, Рабочий стол, Документы и выбранные вами файлы</i> — сохранение полученных файлов и отправка выбранных. Приложение работает в песочнице macOS.</li>
+</ul>
+
+<h3>7. Данные на вашем устройстве</h3>
+<p>Приложение хранит только локальные настройки (например, размеры окна и панелей, параметры отображения) и файлы, которые вы решили принять. На серверах разработчика ничего не хранится.</p>
+
+<h3>8. Ваш выбор и удаление данных</h3>
+<ul>
+<li>Вы можете в любой момент остановить сервер, задать PIN-код, выдать или отозвать любое разрешение в настройках системы (включая доступ к уведомлениям).</li>
+<li>Удаление приложения удаляет его настройки и кэш. Полученные файлы, сохранённые в общие папки (например, «Загрузки» или медиатеку), остаются, пока вы их не удалите.</li>
+</ul>
+
+<h3>9. Дети</h3>
+<p>Приложение не предназначено для детей младше 13 лет и сознательно не собирает их данные.</p>
+
+<h3>10. Изменения</h3>
+<p>Мы можем обновлять эту политику. Изменения публикуются на этой странице с новой датой вступления в силу.</p>
+
+<h3>11. Контакты</h3>
+<p>Вопросы по политике: <a href="mailto:dip7.alex@gmail.com">dip7.alex@gmail.com</a> (Алексей Игнатьев).</p>
+</section>
+<footer>© 2026 Алексей Игнатьев (Aleksei Ignatev) · <a href="mailto:dip7.alex@gmail.com">dip7.alex@gmail.com</a> · <a href="/">Все приложения / All apps</a></footer>
+</main>
+</body>
+</html>
