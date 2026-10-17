@@ -5,6 +5,15 @@
     <link>https://andrioswp.github.io/inmail/appcast.xml</link>
     <language>ru</language>
     <item>
+      <title>Inmail 4.6.3 (213)</title>
+      <pubDate>Sat, 17 Oct 2026 11:15:17 +0300</pubDate>
+      <sparkle:version>213</sparkle:version>
+      <sparkle:shortVersionString>4.6.3</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://andrioswp.github.io/inmail/</sparkle:releaseNotesLink>
+      <enclosure url="https://andrioswp.github.io/inmail/download/Inmail-4.6.3-213-mac.zip" type="application/octet-stream" sparkle:edSignature="Wa7O3yFoPm4oBz5XTtKjcBBwXBiypTsrA3BzYgmcST/3DrSQsLNOVJ6Qb4NTf9mI7FQMeBXZPUvPaYpifcvpCw==" length="32611490" />
+    </item>
+    <item>
       <title>Inmail 4.6.2 (211)</title>
       <pubDate>Sat, 17 Oct 2026 10:41:20 +0300</pubDate>
       <sparkle:version>211</sparkle:version>
