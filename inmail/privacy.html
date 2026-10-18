@@ -10,14 +10,17 @@
 <main>
 <header><nav><a href="/inmail/">Inmail</a><a href="/inmail/privacy.html">Политика конфиденциальности / Privacy Policy</a><a href="/inmail/terms.html">Условия использования / Terms of Service</a></nav></header>
 <h1>Политика конфиденциальности / Privacy Policy</h1>
-<p class="muted">Inmail (Android, macOS) · Дата вступления в силу / Effective date: 1 октября 2026 / 1 October 2026</p>
+<p class="muted">Inmail (Android, macOS) · Дата вступления в силу / Effective date: 18 октября 2026 / 18 October 2026</p>
 
 <section lang="en">
 <h2>English</h2>
 <p>This Privacy Policy describes how Inmail ("the app"), a Gmail client for Android and macOS developed by Aleksei Ignatev ("the developer", "we"), accesses, uses, stores and shares your data.</p>
 
 <h3>1. Data we access</h3>
-<p>When you sign in with your Google account and grant permission, the app uses Google APIs (the Gmail API) to access:</p>
+<p>When you sign in with your Google account and grant permission, the app uses Google APIs to access the following. Some permissions are optional and can be declined; Gmail access is required for the mail client to work.</p>
+
+<h4>1.1 Gmail</h4>
+<p>Using the Gmail API with the <code>gmail.modify</code> scope, the app may access:</p>
 <ul>
 <li>your basic Google account information (email address, name) to identify the signed-in account in the app;</li>
 <li>your Gmail messages, threads, attachments and labels — to <b>read</b> and display your mail;</li>
@@ -25,19 +28,36 @@
 <li>the ability to <b>modify</b> your mail — apply or remove labels, mark as read/unread, archive, move to or restore from trash — when you perform these actions in the app.</li>
 </ul>
 
+<h4>1.2 Google Contacts (People API)</h4>
+<p>If you grant contact permissions (<code>contacts.readonly</code> and <code>contacts.other.readonly</code>), the app may read your Google Contacts and “other contacts” to:</p>
+<ul>
+<li>show contact photos / avatars next to messages and in the compose recipient field;</li>
+<li>suggest recipients when you type an address.</li>
+</ul>
+<p>The app does not export your contact list to the developer’s servers and does not modify your Google Contacts.</p>
+
+<h4>1.3 Google Drive</h4>
+<p>If you grant Drive-related permissions, the app uses them only for these features:</p>
+<ul>
+<li><code>drive.metadata.readonly</code> — read <b>storage quota metadata</b> (how much Drive storage is used / available) to show a usage bar in the app menu. The app does not list or download your existing Drive files through this scope.</li>
+<li><code>drive.file</code> — create and access <b>only files that the app itself creates</b> (for example, uploading a large attachment so the message can include a Drive link). The app cannot see other files in your Drive that it did not create.</li>
+</ul>
+<p>Drive access is optional; you can decline it and still use mail without large Drive uploads or the quota bar.</p>
+
 <h3>2. How we use the data</h3>
-<p>Data received from Google APIs is used <b>only</b> to provide the app's user-facing features: displaying and managing your own mail on your device, at your request. We do not use this data for any other purpose.</p>
+<p>Data received from Google APIs is used <b>only</b> to provide the app's user-facing features: displaying and managing your own mail on your device, showing contact avatars and suggestions, showing Drive quota, and uploading large attachments you choose to send via Drive — all at your request. We do not use this data for any other purpose.</p>
 
 <h3>3. Storage</h3>
 <ul>
-<li>Your mail data (message cache, labels, settings) is stored <b>only locally on your device</b>.</li>
-<li>OAuth access and refresh tokens are stored <b>locally on your device</b> (using the platform's protected storage where available) and are used only to call Google APIs directly from your device.</li>
-<li>The developer does not operate any servers that receive, store or process your Gmail data.</li>
+<li>Your mail data (message cache, labels, settings), contact photo caches used in the UI, and OAuth tokens are stored <b>only locally on your device</b> (using the platform's protected storage where available).</li>
+<li>OAuth access and refresh tokens are used only to call Google APIs <b>directly from your device</b>.</li>
+<li>Files uploaded with <code>drive.file</code> are stored in <b>your</b> Google Drive; the app keeps only what is needed locally to show the link or status of that upload.</li>
+<li>The developer does not operate any servers that receive, store or process your Gmail, Contacts or Drive user data.</li>
 </ul>
 
 <h3>4. Sharing</h3>
 <ul>
-<li>Your data is <b>not sent to the developer's servers</b> and is <b>not shared with, transferred to, or sold to any third parties</b>. The app communicates only with Google's servers to access your mail.</li>
+<li>Your data is <b>not sent to the developer's servers</b> and is <b>not shared with, transferred to, or sold to any third parties</b>. The app communicates only with Google's servers to access your mail, contacts and Drive features.</li>
 <li>The app contains <b>no advertising</b>, <b>no analytics</b> and <b>no tracking</b> SDKs.</li>
 <li>Your data is <b>never sold</b> and is never used for advertising, including personalized or retargeted ads.</li>
 <li>Your data is <b>not used to develop, improve or train artificial intelligence or machine learning models</b>, whether generalized or otherwise.</li>
@@ -49,9 +69,10 @@
 
 <h3>6. Your choices: revoking access and deleting data</h3>
 <ul>
-<li>You can revoke the app's access to your Google account at any time at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
+<li>You can revoke the app's access to your Google account at any time at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a> (this also revokes Gmail, Contacts and Drive scopes).</li>
 <li>You can sign out in the app, which removes the stored tokens for that account.</li>
-<li>You can delete all app data, including cached mail and tokens, by uninstalling the app (on Android, you can also use "Clear storage" in system settings). Since no data is stored on the developer's servers, there is nothing else to delete.</li>
+<li>You can delete all app data, including cached mail, contact photo caches and tokens, by uninstalling the app (on Android, you can also use "Clear storage" in system settings). Since no data is stored on the developer's servers, there is nothing else to delete from the developer.</li>
+<li>Files that were uploaded to your Google Drive remain in your Drive until you delete them yourself in Drive or via Google Account tools.</li>
 </ul>
 
 <h3>7. Security</h3>
@@ -72,7 +93,10 @@
 <p>Настоящая Политика конфиденциальности описывает, как приложение Inmail («приложение») — Gmail-клиент для Android и macOS, разработанный Алексеем Игнатьевым («разработчик», «мы»), — получает доступ к вашим данным, использует, хранит и передаёт их.</p>
 
 <h3>1. К каким данным есть доступ</h3>
-<p>После входа с аккаунтом Google и вашего разрешения приложение через Google API (Gmail API) получает доступ к:</p>
+<p>После входа с аккаунтом Google и вашего разрешения приложение через Google API получает доступ к данным ниже. Часть разрешений необязательна и их можно отклонить; доступ к Gmail нужен для работы почтового клиента.</p>
+
+<h4>1.1 Gmail</h4>
+<p>Через Gmail API со scope <code>gmail.modify</code> приложение может получать доступ к:</p>
 <ul>
 <li>основной информации аккаунта Google (адрес почты, имя) — чтобы показать, какой аккаунт подключён;</li>
 <li>вашим письмам, цепочкам, вложениям и меткам Gmail — чтобы <b>читать</b> и отображать почту;</li>
@@ -80,19 +104,36 @@
 <li>возможности <b>изменять</b> почту — ставить и снимать метки, отмечать прочитанным/непрочитанным, архивировать, перемещать в корзину и восстанавливать — когда вы делаете это в приложении.</li>
 </ul>
 
+<h4>1.2 Контакты Google (People API)</h4>
+<p>Если вы разрешите доступ к контактам (<code>contacts.readonly</code> и <code>contacts.other.readonly</code>), приложение может читать ваши контакты Google и «другие контакты», чтобы:</p>
+<ul>
+<li>показывать фото / аватары контактов рядом с письмами и в поле получателя;</li>
+<li>подсказывать адреса при наборе получателя.</li>
+</ul>
+<p>Список контактов не выгружается на серверы разработчика; приложение не изменяет ваши контакты Google.</p>
+
+<h4>1.3 Google Диск</h4>
+<p>Если вы разрешите доступ к Диску, приложение использует его только так:</p>
+<ul>
+<li><code>drive.metadata.readonly</code> — читать <b>метаданные квоты</b> (сколько места занято / доступно), чтобы показать полоску использования в меню. Через этот scope приложение не просматривает и не скачивает ваши существующие файлы на Диске.</li>
+<li><code>drive.file</code> — создавать и открывать <b>только файлы, которые создало само приложение</b> (например, загрузка большого вложения со ссылкой на Диск). Чужие файлы на Диске, которые приложение не создавало, ему недоступны.</li>
+</ul>
+<p>Доступ к Диску необязателен: его можно отклонить и пользоваться почтой без загрузки больших вложений на Диск и без полоски квоты.</p>
+
 <h3>2. Как используются данные</h3>
-<p>Данные, полученные от Google API, используются <b>только</b> для работы функций приложения: отображения и управления вашей собственной почтой на вашем устройстве по вашему запросу. Ни для каких других целей они не используются.</p>
+<p>Данные, полученные от Google API, используются <b>только</b> для функций приложения: отображения и управления вашей почтой на устройстве, аватаров и подсказок контактов, показа квоты Диска и загрузки выбранных вами больших вложений на Диск — по вашему запросу. Ни для каких других целей они не используются.</p>
 
 <h3>3. Хранение</h3>
 <ul>
-<li>Данные почты (кэш писем, метки, настройки) хранятся <b>только локально на вашем устройстве</b>.</li>
-<li>OAuth-токены (access и refresh) хранятся <b>локально на устройстве</b> (в защищённом хранилище системы, где оно доступно) и используются только для обращения к Google API напрямую с устройства.</li>
-<li>У разработчика нет серверов, которые получают, хранят или обрабатывают ваши данные Gmail.</li>
+<li>Данные почты (кэш писем, метки, настройки), кэш фото контактов для интерфейса и OAuth-токены хранятся <b>только локально на вашем устройстве</b> (в защищённом хранилище системы, где оно доступно).</li>
+<li>OAuth-токены используются только для обращения к Google API <b>напрямую с устройства</b>.</li>
+<li>Файлы, загруженные через <code>drive.file</code>, лежат в <b>вашем</b> Google Диске; на устройстве приложение хранит лишь то, что нужно, чтобы показать ссылку или статус этой загрузки.</li>
+<li>У разработчика нет серверов, которые получают, хранят или обрабатывают ваши данные Gmail, контактов или Диска.</li>
 </ul>
 
 <h3>4. Передача данных</h3>
 <ul>
-<li>Ваши данные <b>не отправляются на серверы разработчика</b> и <b>не передаются и не продаются третьим лицам</b>. Приложение обменивается данными только с серверами Google.</li>
+<li>Ваши данные <b>не отправляются на серверы разработчика</b> и <b>не передаются и не продаются третьим лицам</b>. Приложение обменивается данными только с серверами Google для почты, контактов и функций Диска.</li>
 <li>В приложении <b>нет рекламы</b>, <b>нет аналитики</b> и <b>нет трекеров</b>.</li>
 <li>Ваши данные <b>никогда не продаются</b> и не используются для рекламы, в том числе персонализированной.</li>
 <li>Ваши данные <b>не используются для разработки, улучшения или обучения моделей искусственного интеллекта и машинного обучения</b>.</li>
@@ -105,9 +146,10 @@
 
 <h3>6. Отзыв доступа и удаление данных</h3>
 <ul>
-<li>Вы можете в любой момент отозвать доступ приложения к аккаунту Google: <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
+<li>Вы можете в любой момент отозвать доступ приложения к аккаунту Google: <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a> (это отзывает и Gmail, и Contacts, и Drive).</li>
 <li>Выход из аккаунта в приложении удаляет сохранённые токены этого аккаунта.</li>
-<li>Все данные приложения, включая кэш писем и токены, удаляются при удалении приложения (на Android также можно выбрать «Очистить хранилище» в настройках). Поскольку на серверах разработчика данные не хранятся, больше ничего удалять не нужно.</li>
+<li>Все данные приложения, включая кэш писем, кэш фото контактов и токены, удаляются при удалении приложения (на Android также можно выбрать «Очистить хранилище» в настройках). Поскольку на серверах разработчика данные не хранятся, с разработчика больше ничего удалять не нужно.</li>
+<li>Файлы, уже загруженные в ваш Google Диск, остаются там, пока вы сами не удалите их в Диске или через инструменты аккаунта Google.</li>
 </ul>
 
 <h3>7. Безопасность</h3>
